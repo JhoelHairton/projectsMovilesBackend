@@ -82,8 +82,10 @@ class LogActividad(models.Model):
     def __str__(self):
         return f"{self.accion} - {self.fecha} por {self.id_usuario}"
 
+
+
+# este codigo es para restablacer la contrasela con email esta en proceso
 class PasswordResetToken(models.Model):
-    # En lugar de 'auth.User', usamos settings.AUTH_USER_MODEL
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     token = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)

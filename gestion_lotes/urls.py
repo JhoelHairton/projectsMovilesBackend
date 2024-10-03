@@ -32,6 +32,8 @@ urlpatterns = [
     path('venta/', views.registrar_venta, name='registrar_venta'),
     path('log-actividad/', views.ver_log_actividad, name='ver_log_actividad'),
     path('agregar-lote/', views.agregar_lote, name='agregar_lote'),
+    
+    # este codigo es para restablacer la contrasela con email esta en proceso
     path('forgot-password/', views.send_reset_password_email, name='forgot_password'),
     path('reset-password/<uuid:token>/', views.reset_password, name='reset_password'),
 ]

@@ -133,6 +133,7 @@ def ver_log_actividad(request):
     serializer = LogActividadSerializer(log, many=True)
     return Response(serializer.data)
 
+# este codigo es para restablacer la contrasela con email esta en proceso
 
 def send_reset_password_email(request):
     if request.method == 'POST':
